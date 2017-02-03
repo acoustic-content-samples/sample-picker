@@ -1,0 +1,15 @@
+# Dependency directories
+node_modules
+bower_components
+
+# Merge file artifacts
+*.orig
+
+# Other misc files
+*.DS_Store
+
+# Logs
+*.log
+
+# Other
+.ls
