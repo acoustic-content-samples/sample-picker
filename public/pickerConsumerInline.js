@@ -9,18 +9,17 @@
  */
 "use strict";
 
-// Base URLs and endpoints
-const wchLoginApiGateway = "https://my.digitalexperience.ibm.com/api/";
-const wchLoginURL = wchLoginApiGateway + "login/v1/basicauth";
+// Base URL for APIs - replace {Host} and {Tenant ID} using the values available 
+// from the "i" information icon at the top left of the WCH screen 
+const baseTenantUrl = "https://{Host}/api/{Tenant ID}";
 
+const wchLoginURL = baseTenantUrl + "/login/v1/basicauth";
 
 // Content Hub blueid username and password - replace these or add code to get these from inputs
 const username = "user1@ibm.com";
 const password = "PASSWORD";
 
 var pickerUrl = "https://www.digitalexperience.ibm.com/content-picker/picker.html?fq=classification:asset";
-
-var baseTenantUrl;
 
 //trigger the login on page load
 $(document).ready(function() {
@@ -37,9 +36,6 @@ function wchLogin() {
 
     $.ajax(requestOptions).done(function(data, textStatus, request) {
         // These cookies received on successful login : 'x-ibm-dx-user-auth', x-ibm-dx-tenant-id'  
-
-        //need the baseTenant URL for rendering the resources in resulthandler
-        baseTenantUrl = request.getResponseHeader('x-ibm-dx-tenant-base-url');
 
         // Now that you are logged in and have the cookies, open the picker
         launchInlinePicker();
