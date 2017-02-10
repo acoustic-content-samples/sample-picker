@@ -16,24 +16,9 @@ There are two examples included: **index-inline.html** and **index.html**. The f
 
 The initial set of APIs provided by Watson Content Hub are for authoring services, which require authentication and are not optimized for retrieval by applications in production. Follow-on releases will provide "delivery" services which can be accessed anonymously and are optimized for caching and performance. However, the two APIs will be very similar, so to switch from authoring to delivery services you will just need to change the "authoring" portion of the service URL to "delivery." 
 
-### About authentication and tenant handling
+### About authentication
 
-To call authenticated APIs, you need to first call the login service with the IBMID user name and password. This will return tenant information and an authentication token cookie for use on subsequent calls. The browser will include the authentication token cookie in subsequent requests. 
-
-The login call will return both a tenant base URL and two authentication cookies  (x-ibm-dx-tenantid and x-ibm-dx-user-auth) in the response header. The tenant base url needs to be part of the URL for subsequent API calls. For example, the search service will have a URL like this:
-
-`[tenant-base-url]/delivery/v1/search`  
-
-which is equivalent to    `https://{tenant-host}/api/{tenant-id}/delivery/v1/search`
-
-`https://my.digitalexperience.ibm.com/api/1234c-4567e-890a-000b/delivery/v1/search`
-
-Typically you will use the base URL from the x-ibm-dx-tenant-base-url header to construct the service URL with the tenant ID. This is what's done in the sample code. An alternative approach is to obtain the tenant ID from the Watson Content Hub user interface. Click on the "i" information icon at the top left next to where it says "IBM Watson Content Hub" and you will see your tenant ID.
-
-Once you have the authentication token and have built the complete API link that includes the tenant ID, you can call any of the authenticated APIs by appending the specific API route for the service you want. For example call the search service by appending "/authoring/v1/search" to the base URL.
-
-Note that every API service operation has specific user roles that it can be used with. In the [API Explorer](https://developer.ibm.com/api/view/id-618) you can see the user roles for all operations. The picker allows users in any role, including Viewer, to view assets in WCH.
-
+To call authenticated APIs, you need to first call the login service with the desired user name and password. This will return an authentication token cookie for use on subsequent calls. The browser will include the authentication token cookie in subsequent requests.
 
 ### About URLs to assets
 
@@ -68,11 +53,13 @@ Accessing the published assets through the resource ID identifies a specific ass
 
 Clone or download the repository folder into any folder on your workstation. (Use [Clone or Download](https://help.github.com/articles/cloning-a-repository/) button on the Github repository home page).
 
-#### 2. Update the user credentials
+#### 2. Update the user credentials and baseTenantUrl
 
-This sample uses hard-coded user name and password set in the pickerConsumer.js and pickerConsumerInline.js files in the public directory. Update the name and password values in those files.
+This sample uses hard-coded user name, password, and baseTenantUrl values set in the pickerConsumer.js and pickerConsumerInline.js files in the public directory. Update the name and password values in those files. To avoid putting credentials in the source you could change the application to provide browser inputs for username and password. 
 
-To avoid putting credentials in the source you could change the application to provide browser inputs for username and password. 
+The baseTenantUrl variables in pickerConsumer.js and pickerConsumerInline.js must also be set for your tenant. In the IBM Watson Content Hub user interface, click the "i" information icon at the top left of the screen next to where it says IBM Watson Content Hub. The pop-up window shows your host and tenant ID. Use this information to update the value of baseTenantUrl. For example it might look something like this:
+
+const baseTenantUrl = "https://my12.digitalexperience.ibm.com/api/12345678-9abc-def0-1234-56789abcdef0";
 
 #### 3.  Load sample html in a browser
 
