@@ -90,10 +90,11 @@ function resultHandler(e) {
     if (result.assetType == 'image'){
         resultResource = '<div>'+resultUrl+'</div><img width="150"  src="'+ deliveryUrl +'"><div><pre>' + json + '</div>'
     } else if (result.assetType == 'video'){
-        resultResource = '<div>'+resultUrl+'</div><video width="150"  src="'+ deliveryUrl +'"></video><div><pre>' + json + '</div>'
+        resultResource = '<div>'+resultUrl+'</div><video width="150"  type="{{asset.mediaType}}" controls  src="'+ deliveryUrl +'"></video><div><pre>' + json + '</div>'
     } else {
         resultResource = '<div>'+resultUrl+'</div><div><pre>' + json + '</div>'
     }
     $('#result').html(resultResource);
+
 }
 
