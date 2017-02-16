@@ -83,6 +83,8 @@ function resultHandler(e) {
         resultResource = '<div>'+resultUrl+'</div><img width="150"  src="'+ deliveryUrl +'"><div><pre>' + json + '</div>'
     } else if (result.assetType == 'video'){
         resultResource = '<div>'+resultUrl+'</div><video width="200"  type="'+ result.mediaType +'" controls  src="'+ deliveryUrl +'"></video><div><pre>' + json + '</div>'
+    } else if (result.assetType == 'file'){
+        resultResource = '<div>'+resultUrl+'</div><a href="'+ deliveryUrl +'">'+ result.name +'</a><div><pre>' + json + '</div>'
     } else {
         resultResource = '<div>'+resultUrl+'</div><div><pre>' + json + '</div>'
     }
