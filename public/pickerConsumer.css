@@ -30,8 +30,6 @@
     height: 500px;
 }
 
-
-
 .ui-dialog-titlebar {
     background: #4178be;
     font-family: "Helvetica Neue Roman for IBM", Helvetica, Arial, sans-serif;
@@ -52,7 +50,7 @@
 }
 
 .ui-dialog {
-    min-width:610px!important;
+    min-width:510px!important;
         padding:0;
 }
 
@@ -66,4 +64,19 @@
 }
 .ui-dialog.ui-corner-all{
     border-radius: 0;
+}
+
+.carousel-body {
+    margin: 15px;
+}
+
+.carousel-image {
+    width: 100%;
+    margin: auto;
+    max-height: 750px;
+    max-width: 1200px;
+}
+
+.text-center {
+    color: white;
 }
