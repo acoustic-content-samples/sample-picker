@@ -86,6 +86,5 @@ function resultHandler(event) {
     $("#articleCarousel").addClass("carousel slide");
 
     // Unhide the carousel controls
-    $("#left-carousel-control").removeClass("hidden");
-    $("#right-carousel-control").removeClass("hidden");
+    $(".carousel-control").removeClass("hidden");
 }
