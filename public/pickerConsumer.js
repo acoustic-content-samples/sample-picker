@@ -2,18 +2,19 @@
  * Copyright 2016  IBM Corp.
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- * http://www.apache.org/licenses/LICENSE-2.0 
- * Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an 
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the 
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
 "use strict";
 
-// Base URL for APIs - replace {Host} and {Tenant ID} using the values available 
-// from the "i" information icon at the top left of the WCH screen 
+// Base URL for APIs - replace {Host} and {Tenant ID} using the values available
+// from the "i" information icon at the top left of the WCH screen
 const baseTenantUrl = "https://{Host}/api/{Tenant ID}";
 
-const wchLoginURL = baseTenantUrl + "/login/v1/basicauth";
+// We must authenticate on the 'www' host for the Palette to work
+const wchLoginURL = "https://www.digitalexperience.ibm.com/api/{Tenant ID}/login/v1/basicauth";
 
 // Content Hub blueid username and password - replace these or add code to get these from inputs
 const username = "user1@ibm.com";
@@ -27,15 +28,15 @@ function wchLogin(myhandler, pickerUrl) {
     };
 
     $.ajax(requestOptions).done(function(data, textStatus, request) {
-        // These cookies received on successful login : 'x-ibm-dx-user-auth', x-ibm-dx-tenant-id' 
+        // These cookies received on successful login : 'x-ibm-dx-user-auth', x-ibm-dx-tenant-id'
         // Now that you are logged in and have the cookies, open the picker
         launchPicker(myhandler, pickerUrl);
-        
+
     }).fail(function(request, textStatus, err) {
         alert("Content Hub Login returned an error: " + err + ". Please check your credentials.");
     });
 
-    
+
 }
 
 
@@ -48,7 +49,7 @@ var messageEvent = eventMethod === 'attachEvent' ? 'onmessage' : 'message';
 
 
 function launchPicker(myhandler, url) {
-    
+
     $('#pickerDialog').dialog({
         autoOpen: false,
         show: 'fade',
