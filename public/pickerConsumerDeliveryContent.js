@@ -16,12 +16,13 @@ var eventer = window[eventMethod];
 // else if 'addEventListener', then we need to select 'message' as the event
 var messageEvent = eventMethod === 'attachEvent' ? 'onmessage' : 'message';
 
-// Change these to match the API and base URLs for your tenant
-var apiUrl = 'https://my.digitalexperience.ibm.com/api/cd1e2e32-739f-436a-85d9-a6ad64ebafcb'
-var serverBaseUrl = 'https://my.digitalexperience.ibm.com'
+// Base URL for APIs - replace {Host} and {Tenant ID} using the values available
+// from the "i" information icon at the top left of the WCH screen
+const serverBaseUrl = 'https://{Host}'
+const apiUrl = serverBaseUrl + '/api/{Tenant ID}'
 
-var paletteUrl = 'https://www.digitalexperience.ibm.com/content-picker/picker.html';
-var deliveryPaletteUrl = paletteUrl + '?apiUrl=' + apiUrl + '&fq=classification:content&fq=type:Article&multiselect=true';
+const paletteUrl = 'https://www.digitalexperience.ibm.com/content-picker/picker.html';
+const deliveryPaletteUrl = paletteUrl + '?apiUrl=' + apiUrl + '&fq=classification:content&fq=type:Article&multiselect=true';
 
 function launchPicker() {
 
