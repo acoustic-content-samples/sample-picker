@@ -13,7 +13,8 @@
 // from the "i" information icon at the top left of the WCH screen 
 const baseTenantUrl = "https://{Host}/api/{Tenant ID}";
 
-const wchLoginURL = baseTenantUrl + "/login/v1/basicauth";
+// We must authenticate on the 'www' host for the Palette to work
+const wchLoginURL = "https://www.digitalexperience.ibm.com/api/{Tenant ID}/login/v1/basicauth";
 
 // Content Hub blueid username and password - replace these or add code to get these from inputs
 const username = "user1@ibm.com";
