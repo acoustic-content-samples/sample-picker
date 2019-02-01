@@ -22,7 +22,7 @@ const password = "PASSWORD";
 
 var pickerUrl = "https://www.digitalexperience.ibm.com/content-picker/picker.html" +
   "?fq=classification:asset" +         // limit picker to showing only assets
-  "&apiAuthoringUrl=" + baseTenantUrl; // add apiAuthoringUrl to enable authoring use of picker
+  "&authoringApiUrl=" + baseTenantUrl; // add apiAuthoringUrl to enable authoring use of picker
 
 //trigger the login on page load
 $(document).ready(function() {
