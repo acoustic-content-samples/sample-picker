@@ -14,13 +14,15 @@
 const baseTenantUrl = "https://{Host}/api/{Tenant ID}";
 
 // We must authenticate on the 'www' host for the Palette to work
-const wchLoginURL = "https://www.digitalexperience.ibm.com/api/{Tenant ID}/login/v1/basicauth";
+const wchLoginPath = "/login/v1/basicauth";
 
 // Content Hub blueid username and password - replace these or add code to get these from inputs
 const username = "user1@ibm.com";
 const password = "PASSWORD";
 
-var pickerUrl = "https://www.digitalexperience.ibm.com/content-picker/picker.html?fq=classification:asset";
+var pickerUrl = "https://www.digitalexperience.ibm.com/content-picker/picker.html" +
+  "?fq=classification:asset" +         // limit picker to showing only assets
+  "&authoringApiUrl=" + baseTenantUrl; // add apiAuthoringUrl to enable authoring use of picker
 
 //trigger the login on page load
 $(document).ready(function() {
@@ -31,7 +33,7 @@ $(document).ready(function() {
 function wchLogin() {
     var requestOptions = {
         xhrFields: { withCredentials: true },
-        url: wchLoginURL,
+        url: baseTenantUrl + wchLoginPath,
         headers: { "Authorization": "Basic " + btoa(username + ":" + password) }
     };
 
