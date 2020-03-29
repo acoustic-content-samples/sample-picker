@@ -1,5 +1,5 @@
-# IBM Watson Content Hub Palette
-There are three sample applications provided in this repository that illustrate how to open the IBM Watson Content Hub Palette from client JavaScript.
+# Acoustic Content Palette
+There are three sample applications provided in this repository that illustrate how to open the Acoustic Content (formerly Watson Content Hub) Palette from client JavaScript.
 
 The first sample application contained within **index-inline.html** uses jQuery to login, open the Palette and choose an Asset. The second sample application contained within **index.html** extends this to also show how to customize which Assets are displayed.
 
