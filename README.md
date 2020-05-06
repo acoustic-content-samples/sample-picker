@@ -66,7 +66,7 @@ Accessing the published asset through the asset path addresses your published re
 
 `https://my.digitalexperience.ibm.com/1234c-4567e-890a-000b/delivery/v1/resources/3b09333ceffee0001`
 
-Accessing the published assets through the resource ID identifies a specific asset binary. This access point is provided by the delivery resource service API. You can find the corresponding API documentation in the [Watson Content Hub API documentation](https://developer.ibm.com/api/).
+Accessing the published assets through the resource ID identifies a specific asset binary. This access point is provided by the delivery resource service API. You can find the corresponding API documentation in the [Acoustic Content API documentation](https://developer.goacoustic.com/acoustic-content/reference).
 
 `https://{tenant-host}/api/{tenant-id}/delivery/v1/resources/{resource-id}`
 
