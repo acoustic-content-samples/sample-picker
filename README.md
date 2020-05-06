@@ -5,27 +5,27 @@ The first sample application contained within **index-inline.html** uses jQuery 
 
 These first two samples are built in JavaScript and HTML, and illustrate:
 
-* Authenticating to the Watson Content Hub
-* Launching the Watson Content Hub Picker to view available assets.
-* Returning the JSON definition of an asset from Watson Content Hub
+* Authenticating to Acoustic Content
+* Launching the Acoustic Content Picker to view available assets.
+* Returning the JSON definition of an asset from Acoustic Content
 
 The third sample application contained within **index-delivery-content.html** combines three new modes of operation:
 
-*	Launching the Watson Content Hub Palette to select Content
-*	Using the Watson Content Hub Palette in ‘Delivery mode’ that doesn’t require authentication and only returns only published Assets and Content
-* Using the Watson Content Hub Palette in ‘Multi-select mode’ that allows more than one item to be selected at a time
+*	Launching the Acoustic Content Palette to select Content
+*	Using the Acoustic Content Palette in ‘Delivery mode’ that doesn’t require authentication and only returns only published Assets and Content
+* Using the Acoustic Content Palette in ‘Multi-select mode’ that allows more than one item to be selected at a time
 
-### About the Watson Content Hub Authoring APIs
+### About the Acoustic Content Authoring APIs
 
-The initial set of APIs provided by Watson Content Hub are for Authoring services, which require authentication and are not optimized for retrieval by applications in production.
+The initial set of APIs provided by Acoustic Content are for Authoring services, which require authentication and are not optimized for retrieval by applications in production.
 
 ### About authentication
 
 To call authenticated APIs, you need to first call the login service with the desired user name and password. This will return an authentication token cookie for use on subsequent calls. The browser will include the authentication token cookie in subsequent requests.
 
-### Accessing the WCH Palette without authentication
+### Accessing the Acoustic Content Palette without authentication
 
-The Watson Content Hub Palette can also be launched to use the Delivery APIs that do not require authentication simply by adding a query parameter that references your API URL. Your API URL can be obtained from from the ‘Hub information’ dialog in the WCH UI. For example: https://www.digitalexperience.ibm.com/content-picker/picker.html?apiUrl=https://my2.digitalexperience.ibm.com/api/7b68b4ce-fb1c-4f33-bc5c-8b7881662107
+The Acoustic Content Palette can also be launched to use the Delivery APIs that do not require authentication simply by adding a query parameter that references your API URL. Your API URL can be obtained from from the ‘Hub information’ dialog in the WCH UI. For example: https://www.digitalexperience.ibm.com/content-picker/picker.html?apiUrl=https://my2.digitalexperience.ibm.com/api/7b68b4ce-fb1c-4f33-bc5c-8b7881662107
 
 
 ![Alt text](docs/HubInfo2Redacted.png?raw=true "WCH Hub Information")
@@ -35,7 +35,7 @@ The Watson Content Hub Palette can also be launched to use the Delivery APIs tha
 
 By using the Palette in 'Delivery mode' you will benefit from using anonymous services that are also optimized for caching and performance. **Note** You will only see published Assets and Content returned.
 
-For more information about using the Palette in ‘Delivery mode’, see https://developer.ibm.com/customer-engagement/tutorials/using-watson-content-hub-palette-delivery-mode
+For more information about using the Palette in ‘Delivery mode’, see https://developer.goacoustic.com/acoustic-content/docs/using-the-acoustic-content-palette-in-delivery-mode
 
 ### Using the WCH Palette to select more than one item
 
@@ -83,7 +83,7 @@ Clone or download the repository folder into any folder on your workstation. (Us
 
 This sample uses hard-coded user name, password, and baseTenantUrl values set in the pickerConsumer.js and pickerConsumerInline.js files in the public directory. Update the name and password values in those files. To avoid putting credentials in the source you could change the application to provide browser inputs for username and password.
 
-The baseTenantUrl variables in pickerConsumer.js and pickerConsumerInline.js must also be set for your tenant. In the IBM Watson Content Hub user interface, click the "i" information icon at the top left of the screen next to where it says IBM Watson Content Hub. The pop-up window shows your host and tenant ID. Use this information to update the value of baseTenantUrl. For example it might look something like this:
+The baseTenantUrl variables in pickerConsumer.js and pickerConsumerInline.js must also be set for your tenant. In the Acoustic Content user interface, click the "i" information icon at the top left of the screen next to where it says Acoustic Content. The pop-up window shows your host and tenant ID. Use this information to update the value of baseTenantUrl. For example it might look something like this:
 
 const baseTenantUrl = "https://my12.digitalexperience.ibm.com/api/12345678-9abc-def0-1234-56789abcdef0";
 
