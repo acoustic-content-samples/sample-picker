@@ -199,10 +199,10 @@ When you choose an asset, the information about the asset is returned in JSON fo
 Launch the Palette in 'Delivery mode' and select multiple Content Items. The JSON array is parsed and a Bootstrap Carousel is created to render the selected Content Items.
 
 
-### Resources
+## Resources
 
-API Explorer reference documentation: https://developer.ibm.com/api/view/id-618
+Acoustic Content developer documentation: https://developer.goacoustic.com/acoustic-content/docs
 
-Watson Content Hub developer center: https://developer.ibm.com/wch/
+Acoustic Content API reference documentation: https://developer.goacoustic.com/acoustic-content/reference
 
-Watson Content Hub forum: https://developer.ibm.com/answers/smartspace/wch/
+Acoustic Content Samples Gallery: https://content-samples.goacoustic.com/
