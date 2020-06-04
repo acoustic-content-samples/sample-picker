@@ -21,7 +21,7 @@ var messageEvent = eventMethod === 'attachEvent' ? 'onmessage' : 'message';
 const serverBaseUrl = 'https://{Host}'
 const apiUrl = serverBaseUrl + '/api/{Tenant ID}'
 
-const paletteUrl = 'https://www.digitalexperience.ibm.com/content-picker/picker.html';
+const paletteUrl = 'https://content-us.goacoustic.com/content-picker/picker.html';
 const deliveryPaletteUrl = paletteUrl + '?apiUrl=' + apiUrl + '&fq=classification:content&fq=type:Article&multiselect=true';
 
 function launchPicker() {

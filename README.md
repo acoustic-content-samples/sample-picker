@@ -25,7 +25,7 @@ To call authenticated APIs, you need to first call the login service with the de
 
 ### Accessing the Acoustic Content Palette without authentication
 
-The Acoustic Content Palette can also be launched to use the Delivery APIs that do not require authentication simply by adding a query parameter that references your API URL. Your API URL can be obtained from from the ‘Hub information’ dialog in the WCH UI. For example: https://www.digitalexperience.ibm.com/content-picker/picker.html?apiUrl=https://my2.digitalexperience.ibm.com/api/7b68b4ce-fb1c-4f33-bc5c-8b7881662107
+The Acoustic Content Palette can also be launched to use the Delivery APIs that do not require authentication simply by adding a query parameter that references your API URL. Your API URL can be obtained from from the ‘Hub information’ dialog in the WCH UI. For example: https://content-us.goacoustic.com/content-picker/picker.html?apiUrl=https://my2.digitalexperience.ibm.com/api/7b68b4ce-fb1c-4f33-bc5c-8b7881662107
 
 
 ![Alt text](docs/HubInfo2Redacted.png?raw=true "WCH Hub Information")
@@ -39,7 +39,7 @@ For more information about using the Palette in ‘Delivery mode’, see https:/
 
 ### Using the WCH Palette to select more than one item
 
-You can now select more than one Content Item or Asset at a time by launching the Palette in ‘Multi-select' mode. Enabling multi-select mode is as simple as adding a ‘multiSelect=true’ query parameter when launching the Palette. For example: https://www.digitalexperience.ibm.com/content-picker/picker.html?multiselect=true
+You can now select more than one Content Item or Asset at a time by launching the Palette in ‘Multi-select' mode. Enabling multi-select mode is as simple as adding a ‘multiSelect=true’ query parameter when launching the Palette. For example: https://content-us.goacoustic.com/content-picker/picker.html?multiselect=true
 
 **Note** Using 'Multiselect mode' returns a JSON array instead of a single JSON object.
 
@@ -144,12 +144,12 @@ A dropdown is shown which contains some options for customizing which items are 
 <img src="./docs/dropdown-open.png" alt="picker" width="300" />
 
 
-<p>All Assets: https://www.digitalexperience.ibm.com/content-picker/picker.html?*fq=classification:asset*</p>
-<p>Images:     https://www.digitalexperience.ibm.com/content-picker/picker.html?fq=classification:asset&*fq=assetType:image*</p>
-<p>Videos:   https://www.digitalexperience.ibm.com/content-picker/picker.html?fq=classification:asset&*fq=assetType:video*</p>
-<p>Files:  https://www.digitalexperience.ibm.com/content-picker/picker.html?fq=classification:asset&*fq=assetType:file*</p>
-<p>Images tagged with 'nature':    https://www.digitalexperience.ibm.com/content-picker/picker.html?fq=classification:asset&*fq=assetType:image&fq=tags:(nature)*</p>
-<p>Images with media-type:     https://www.digitalexperience.ibm.com/content-picker/picker.html?fq=classification:asset&*fq=assetType:image&fq=mediaType:(image/jpeg)*</p>
+<p>All Assets: https://content-eu.goacoustic.com/content-picker/picker.html?*fq=classification:asset* or https://content-us.goacoustic.com/content-picker/picker.html?*fq=classification:asset*</p>
+<p>Images:     https://content-eu.goacoustic.com/content-picker/picker.html?fq=classification:asset&*fq=assetType:image* or https://content-us.goacoustic.com/content-picker/picker.html?fq=classification:asset&*fq=assetType:image*</p>
+<p>Videos:   https://content-eu.goacoustic.com/content-picker/picker.html?fq=classification:asset&*fq=assetType:video* or https://content-us.goacoustic.com/content-picker/picker.html?fq=classification:asset&*fq=assetType:video*</p>
+<p>Files:  https://content-eu.goacoustic.com/content-picker/picker.html?fq=classification:asset&*fq=assetType:file* or https://content-us.goacoustic.com/content-picker/picker.html?fq=classification:asset&*fq=assetType:file*</p>
+<p>Images tagged with 'nature':    https://content-eu.goacoustic.com/content-picker/picker.html?fq=classification:asset&*fq=assetType:image&fq=tags:(nature)* or https://content-us.goacoustic.com/content-picker/picker.html?fq=classification:asset&*fq=assetType:image&fq=tags:(nature)*</p>
+<p>Images with media-type:     https://content-eu.goacoustic.com/content-picker/picker.html?fq=classification:asset&*fq=assetType:image&fq=mediaType:(image/jpeg)* or https://content-us.goacoustic.com/content-picker/picker.html?fq=classification:asset&*fq=assetType:image&fq=mediaType:(image/jpeg)*</p>
 
 
 <br/><br/>
