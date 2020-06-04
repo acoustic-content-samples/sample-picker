@@ -20,7 +20,7 @@ const wchLoginPath = "/login/v1/basicauth";
 const username = "user1@ibm.com";
 const password = "PASSWORD";
 
-var pickerUrl = "https://www.digitalexperience.ibm.com/content-picker/picker.html" +
+var pickerUrl = "https://content-us.goacoustic.com/content-picker/picker.html" +
   "?fq=classification:asset" +         // limit picker to showing only assets
   "&authoringApiUrl=" + baseTenantUrl; // add apiAuthoringUrl to enable authoring use of picker
 
