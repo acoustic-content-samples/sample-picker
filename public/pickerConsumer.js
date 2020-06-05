@@ -33,7 +33,7 @@ function wchLogin(myhandler, pickerUrl) {
         launchPicker(myhandler, pickerUrl);
 
     }).fail(function(request, textStatus, err) {
-        alert("Content Hub Login returned an error: " + err + ". Please check your credentials.");
+        alert("Acoustic Content Login returned an error: " + err + ". Please check your credentials.");
     });
 
 
