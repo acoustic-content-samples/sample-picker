@@ -25,7 +25,7 @@ To call authenticated APIs, you need to first call the login service with the de
 
 ### Accessing the Acoustic Content Palette without authentication
 
-The Acoustic Content Palette can also be launched to use the Delivery APIs that do not require authentication simply by adding a query parameter that references your API URL. Your API URL can be obtained from from the ‘Hub information’ dialog in the WCH UI. For example: https://content-us.goacoustic.com/content-picker/picker.html?apiUrl=https://my2.digitalexperience.ibm.com/api/7b68b4ce-fb1c-4f33-bc5c-8b7881662107
+The Acoustic Content Palette can also be launched to use the Delivery APIs that do not require authentication simply by adding a query parameter that references your API URL. Your API URL can be obtained from from the ‘Hub information’ dialog in the Content UI. For example: https://content-us.goacoustic.com/content-picker/picker.html?apiUrl=https://my2.digitalexperience.ibm.com/api/7b68b4ce-fb1c-4f33-bc5c-8b7881662107
 
 
 ![Alt text](docs/HubInfo2Redacted.png?raw=true "WCH Hub Information")
@@ -37,7 +37,7 @@ By using the Palette in 'Delivery mode' you will benefit from using anonymous se
 
 For more information about using the Palette in ‘Delivery mode’, see https://developer.goacoustic.com/acoustic-content/docs/using-the-acoustic-content-palette-in-delivery-mode
 
-### Using the WCH Palette to select more than one item
+### Using the Acoustic Content Palette to select more than one item
 
 You can now select more than one Content Item or Asset at a time by launching the Palette in ‘Multi-select' mode. Enabling multi-select mode is as simple as adding a ‘multiSelect=true’ query parameter when launching the Palette. For example: https://content-us.goacoustic.com/content-picker/picker.html?multiselect=true
 
@@ -46,6 +46,10 @@ You can now select more than one Content Item or Asset at a time by launching th
 ![Alt text](docs/MultiSelectAssets.png?raw=true "Selecting multiple Assets at once")
 
 <br/>
+
+### Using the new look and feel for the Palette
+
+To show the palette with the new look and feel, pass the parameter `carbon=true` in the request URL.
 
 ### About URLs to Assets
 
