@@ -47,9 +47,18 @@ You can now select more than one Content Item or Asset at a time by launching th
 
 <br/>
 
-### Using the new look and feel for the Palette
+### Available parameters for the Palette
 
-To show the palette with the new look and feel, pass the parameter `carbon=true` in the request URL.
+| Name | Example | Description |
+|:-----|:--------------|:------------|
+|carbon|true| Use latest look and feel while launching the palette.
+|source|wch| Parameter indicates the media backend that should be used to query asset details. For e.g. source=wch,shutterstock means query from both Acoustic Content (formally WCH) and Shutterstock.
+|multiselect| true | Enable multiple assets to be selected at the same time.
+|multiSelectLimit| 3 | Maximum number of elements that can be selected when multiselect=true.
+|isManaged| true | Parameter defines if managed assets (aka UI assets such as images, videos and files), unmanaged assets (aka web assets, such as HTML and JS files) or both needs to be displayed in the palette. Possible values are _true_, _false_ or _both_.
+|assetUpload| true | Parameter determines whether the drag and drop asset upload box should be to displayed inside the palette.
+|downloadAsset| true |  Parameter controls whether 3rd Party assets should be allowed to be downloaded into Content in the palette.
+|fq| assetType:video | The solr search filter query to use to display items in the palette. There can be many of these. See below for some examples.
 
 ### About URLs to Assets
 
