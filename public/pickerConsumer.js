@@ -16,7 +16,7 @@ const baseTenantUrl = "https://{Host}/api/{Tenant ID}";
 // We must authenticate on the 'www' host for the Palette to work
 const wchLoginPath = "/login/v1/basicauth";
 
-// Content Hub blueid username and password - replace these or add code to get these from inputs
+// Content username and password - replace these or add code to get these from inputs
 const username = "user1@ibm.com";
 const password = "PASSWORD";
 
