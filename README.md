@@ -25,7 +25,7 @@ To call authenticated APIs, you need to first call the login service with the de
 
 ### Accessing the Acoustic Content Palette without authentication
 
-The Acoustic Content Palette can also be launched to use the Delivery APIs that do not require authentication simply by adding a query parameter that references your API URL. Your API URL can be obtained from from the ‘Hub information’ dialog in the Content UI. For example: https://content-us.goacoustic.com/content-picker/picker.html?apiUrl=https://my2.digitalexperience.ibm.com/api/7b68b4ce-fb1c-4f33-bc5c-8b7881662107
+The Acoustic Content Palette can also be launched to use the Delivery APIs that do not require authentication simply by adding a query parameter that references your API URL. Your API URL can be obtained from from the ‘Hub information’ dialog in the Content UI. For example: https://content-us.goacoustic.com/content-picker/picker.html?apiUrl=https://content-us-2.content-cms.com/api/7b68b4ce-fb1c-4f33-bc5c-8b7881662107
 
 
 ![Alt text](docs/HubInfo2Redacted.png?raw=true "WCH Hub Information")
@@ -66,7 +66,7 @@ Accessing the unpublished Assets through the resource ID identifies a specific a
 
 `https://{tenant-host}/api/{tenant-id}/authoring/v1/resources/{resource-id}`
 
-`https://my.digitalexperience.ibm.com/api/1234c-4567e-890a-000b/authoring/v1/resources/3b09333ceffee0001`
+`https://content-us-1.content-cms.com/api/1234c-4567e-890a-000b/authoring/v1/resources/3b09333ceffee0001`
 
 The published versions of your Assets can be accessed from your delivery system through the following two entry points:
 
@@ -77,13 +77,13 @@ Accessing the published asset through the asset path addresses your published re
 
 `https://{tenant-host}/{tenant-id}/{asset-path}`
 
-`https://my.digitalexperience.ibm.com/1234c-4567e-890a-000b/delivery/v1/resources/3b09333ceffee0001`
+`https://content-us-1.content-cms.com/1234c-4567e-890a-000b/delivery/v1/resources/3b09333ceffee0001`
 
 Accessing the published assets through the resource ID identifies a specific asset binary. This access point is provided by the delivery resource service API. You can find the corresponding API documentation in the [Acoustic Content API documentation](https://developer.goacoustic.com/acoustic-content/reference).
 
 `https://{tenant-host}/api/{tenant-id}/delivery/v1/resources/{resource-id}`
 
-`https://my.digitalexperience.ibm.com/api/1234c-4567e-890a-000b/delivery/v1/resources/3b09333ceffee0001`
+`https://content-us-1.content-cms.com/api/1234c-4567e-890a-000b/delivery/v1/resources/3b09333ceffee0001`
 
 
 ### Running the sample
@@ -98,7 +98,7 @@ This sample uses hard-coded user name, password, and baseTenantUrl values set in
 
 The baseTenantUrl variables in pickerConsumer.js and pickerConsumerInline.js must also be set for your tenant. In the Acoustic Content user interface, click the "i" information icon at the top left of the screen next to where it says Acoustic Content. The pop-up window shows your host and tenant ID. Use this information to update the value of baseTenantUrl. For example it might look something like this:
 
-const baseTenantUrl = "https://my12.digitalexperience.ibm.com/api/12345678-9abc-def0-1234-56789abcdef0";
+const baseTenantUrl = "https://content-eu-4.content-cms.com/api/12345678-9abc-def0-1234-56789abcdef0";
 
 For the 'Delivery mode' sample, you need to replace the {Host} and {Tenant ID} values in pickerConsumerDeliveryContent.js
 
